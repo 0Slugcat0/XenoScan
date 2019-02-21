@@ -39,7 +39,7 @@ else()
 
 endif()
 
-if (DOLPHIN)
+
 file(GLOB SCANNER_TARGET_EMULATOR_HEADER_FILES
 	"ScannerTargetDolphin.h"
 )
@@ -47,9 +47,7 @@ file(GLOB SCANNER_TARGET_EMULATOR_SOURCE_FILES
 	"ScannerTargetDolphin.cpp"
 )
 
-else()
 
-endif()
 file(GLOB SCANNER_VARIANT_HEADER_FILES
 	"ScanVariant.h"
 	"ScanVariantTypeTraits.h"

@@ -28,7 +28,18 @@ else()
 
 endif()
 
-if (WIN32)
+if (UNIX_enabled)
+	file(GLOB SCANNER_TARGET_NATIVE_HEADER_FILES
+		"ScannerTargetLinux.h"
+	)
+	file(GLOB SCANNER_TARGET_NATIVE_SOURCE_FILES
+		"ScannerTargetLinux.cpp"
+	)
+else()
+
+endif()
+
+if (DOLPHIN)
 file(GLOB SCANNER_TARGET_EMULATOR_HEADER_FILES
 	"ScannerTargetDolphin.h"
 )

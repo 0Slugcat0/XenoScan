@@ -105,7 +105,7 @@ public:
 		return ret;
 	}
 
-	inline void deallocate(const typename pointer p, const typename size_type n)
+	inline void deallocate(const pointer p, const size_type n) 
 	{
 		// do nothing
 	}

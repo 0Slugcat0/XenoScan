@@ -28,7 +28,7 @@ else()
 
 endif()
 
-if (UNIX_enabled)
+if (UNIX_disabled)
 	file(GLOB SCANNER_TARGET_NATIVE_HEADER_FILES
 		"ScannerTargetLinux.h"
 	)

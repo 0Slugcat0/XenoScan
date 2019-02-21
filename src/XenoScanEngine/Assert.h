@@ -1,7 +1,8 @@
 #pragma once
 
-#define ASSERT(x) do { \
+#define ASSERT(x)\
+do { \
 if (!(x)) {	\
-	__asm { int 3 } \
+	asm ( "int 3" ); \
 } \
 } while (0, 0);

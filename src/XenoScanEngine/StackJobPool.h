@@ -107,7 +107,7 @@ public:
 
 private:
 	std::function<void(JOB_DETAIL_TYPE& details)> workerCallback;
-	std::chrono::time_point<std::chrono::steady_clock> startTime;
+	std::chrono::time_point<std::chrono::system_clock> startTime;
 	size_t numberOfConcurentThreadsSupported;
 	std::vector<std::thread> workerThreads;
 	std::stack<JOB_DETAIL_TYPE> pendingJobs;

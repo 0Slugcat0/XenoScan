@@ -3,6 +3,6 @@
 #define ASSERT(x)\
 do { \
 if (!(x)) {	\
-	asm ( "int 3" ); \
+	__asm__("int3"); \
 } \
 } while (0, 0);

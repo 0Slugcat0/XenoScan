@@ -8,4 +8,4 @@
 // to ensure that the factory has already been initialized
 CREATE_FACTORY(ScannerTarget);
 CREATE_PRODUCER(ScannerTarget, NativeScannerTarget,   "proc");
-CREATE_PRODUCER(ScannerTarget, ScannerTargetDolphin,  "dolphin");
+//CREATE_PRODUCER(ScannerTarget, ScannerTargetDolphin,  "dolphin");

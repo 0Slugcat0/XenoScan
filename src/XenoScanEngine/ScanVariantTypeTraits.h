@@ -73,7 +73,7 @@ public:
 		wchar_t buffer[100];
 
 		memcpy(&value, data, sizeof(value));
-		swprintf_s<100>(buffer, this->typeFormat.c_str(), value);
+		swprintf<100>(buffer, this->typeFormat.c_str(), value);
 		return buffer;
 	}
 	virtual void fromString(const std::wstring& input, ScanVariant& output) const;

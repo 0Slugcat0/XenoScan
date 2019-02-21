@@ -29,7 +29,7 @@ public:
 	ScanResultAddress(MemoryAddress _adr) : adr(_adr)
 	{
 		char result[100];
-		sprintf_s<100>(result, "0x%p", this->adr);
+		sprintf<100>(result, "0x%p", this->adr);
 		this->asString = result;
 	}
 	~ScanResultAddress() {}

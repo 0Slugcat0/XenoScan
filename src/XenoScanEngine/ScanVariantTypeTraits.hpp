@@ -12,7 +12,7 @@ void ScanVariantUnderlyingNumericTypeTraits<TYPE, UNSIGNED, FLOATING, BASE_TYPE,
 {
 	TYPE value;
 	uint8_t buffer[sizeof(int64_t)];
-	if (swscanf_s(input.c_str(), this->typeFormat.c_str(), &buffer[0]) == -1)
+	if (swscanf(input.c_str(), this->typeFormat.c_str(), &buffer[0]) == -1)
 	{
 		output = ScanVariant::MakeNull();
 		return;

@@ -7,6 +7,7 @@
 #include "Assert.h"
 #include "ScanVariantTypeTraits.h"
 #include "ScannerTypes.h"
+#include <string.h>
 
 class ScanVariant
 {

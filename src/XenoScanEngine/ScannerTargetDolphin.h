@@ -7,6 +7,7 @@
 #include <vector>
 
 #include "ScannerTarget.h"
+#include <string.h>
 
 class ScannerTargetDolphin : public ScannerTarget
 {

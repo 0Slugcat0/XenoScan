@@ -1,6 +1,6 @@
 #pragma once
 #include <memory>
-#include <string>
+#include <string.h>
 
 #include "ScannerTypes.h"
 #include "KeyedFactory.h"

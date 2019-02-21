@@ -1,6 +1,6 @@
 #pragma once
 #include "ScannerTypes.h"
-
+#include "Scanner.h"
 #include <stdint.h>
 
 

@@ -1,5 +1,5 @@
 #include "ScanVariant.h"
-#include "Scanner.h"
+
 
 #include "ScanVariantTypeTraits.hpp"
 

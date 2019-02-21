@@ -78,7 +78,7 @@ else()
 	)
 endif()
 
-add_definitions(-DXENOSCANENGINE_LIB)
+add_definitions(-DXENOSCANENGINE_LIB -fpermissive)
 
 add_library(XenoScanEngine STATIC
 	${SCANNER_HEADER_FILES}
@@ -103,25 +103,25 @@ add_library(XenoScanEngine STATIC
 	${DEBUG_HELP_FILES}
 )
 
-target_link_libraries(XenoScanEngine XenoLua)
+target_link_libraries(XenoScanEngine)
 
 source_group("Headers"        FILES ${HEADER_FILES})
 source_group("Sources"        FILES ${SOURCE_FILES})
 
 source_group("Natvis"         FILES ${DEBUG_HELP_FILES})
 
-source_group("Headers\\Scanner"               FILES ${SCANNER_HEADER_FILES})
-source_group("Sources\\Scanner"               FILES ${SCANNER_SOURCE_FILES})
+source_group("Headers/Scanner"               FILES ${SCANNER_HEADER_FILES})
+source_group("Sources/Scanner"               FILES ${SCANNER_SOURCE_FILES})
 
-source_group("Headers\\ScannerTarget"           FILES ${SCANNER_TARGET_HEADER_FILES})
-source_group("Sources\\ScannerTarget"           FILES ${SCANNER_TARGET_SOURCE_FILES})
-source_group("Headers\\ScannerTarget\\Native"   FILES ${SCANNER_TARGET_NATIVE_HEADER_FILES})
-source_group("Sources\\ScannerTarget\\Native"   FILES ${SCANNER_TARGET_NATIVE_SOURCE_FILES})
-source_group("Headers\\ScannerTarget\\Emulator" FILES ${SCANNER_TARGET_EMULATOR_HEADER_FILES})
-source_group("Sources\\ScannerTarget\\Emulator" FILES ${SCANNER_TARGET_EMULATOR_SOURCE_FILES})
+source_group("Headers/ScannerTarget"           FILES ${SCANNER_TARGET_HEADER_FILES})
+source_group("Sources/ScannerTarget"           FILES ${SCANNER_TARGET_SOURCE_FILES})
+source_group("Headers/ScannerTarget/Native"   FILES ${SCANNER_TARGET_NATIVE_HEADER_FILES})
+source_group("Sources/ScannerTarget/Native"   FILES ${SCANNER_TARGET_NATIVE_SOURCE_FILES})
+source_group("Headers/ScannerTarget/Emulator" FILES ${SCANNER_TARGET_EMULATOR_HEADER_FILES})
+source_group("Sources/ScannerTarget/Emulator" FILES ${SCANNER_TARGET_EMULATOR_SOURCE_FILES})
 
-source_group("Headers\\ScanVariant"           FILES ${SCANNER_VARIANT_HEADER_FILES})
-source_group("Sources\\ScanVariant"           FILES ${SCANNER_VARIANT_SOURCE_FILES})
+source_group("Headers/ScanVariant"           FILES ${SCANNER_VARIANT_HEADER_FILES})
+source_group("Sources/ScanVariant"           FILES ${SCANNER_VARIANT_SOURCE_FILES})
 
-source_group("Headers\\Blueprints"            FILES ${SCANNER_BLUEPRINT_HEADER_FILES})
-source_group("Sources\\Blueprints"            FILES ${SCANNER_BLUEPRINT_SOURCE_FILES})
+source_group("Headers/Blueprints"            FILES ${SCANNER_BLUEPRINT_HEADER_FILES})
+source_group("Sources/Blueprints"            FILES ${SCANNER_BLUEPRINT_SOURCE_FILES})

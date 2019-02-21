@@ -11,7 +11,7 @@ struct internalEndianessConverter { };
 
 #define GENERATE_SIZED_ENDIANNESS_CONVERTER(SIZE, STATEMENT) \
 	template<typename T> \
-	struct internalEndianessConverter<typename T, SIZE> \
+	struct internalEndianessConverter<T, SIZE> \
 	{ \
 		constexpr static T swap(T in) \
 		{ \
@@ -25,7 +25,7 @@ struct internalEndianessConverter { };
 	{ \
 		constexpr static TYPE swap(TYPE in) \
 		{ \
-			static_assert(sizeof(TYPE) == sizeof(ALIAS), "Sizes of " ## #TYPE ## " and " ## #ALIAS ## " are different"); \
+			static_assert(sizeof(TYPE) == sizeof(ALIAS), "Sizes of " #TYPE " and " #ALIAS " are different"); \
 			auto out = internalEndianessConverter<ALIAS, sizeof(ALIAS)>::swap(*reinterpret_cast<ALIAS*>(&in)); \
 			return *reinterpret_cast<TYPE*>(&out); \
 		} \

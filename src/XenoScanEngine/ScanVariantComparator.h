@@ -1,6 +1,5 @@
 #pragma once
 #include "ScannerTypes.h"
-#include "Scanner.h"
 #include <stdint.h>
 
 
@@ -49,9 +48,9 @@ CompareTypeFlags bigEndianNumericComparator(const void* const source, const void
 {
 	auto at = *(T*)source;
 	auto bt = swapEndianness(*(T*)check);
-	if (at == bt) return  Scanner::SCAN_COMPARE_EQUALS;
-	else if (at < bt) return  Scanner::SCAN_COMPARE_GREATER_THAN;
-	else return Scanner::SCAN_COMPARE_LESS_THAN;
+	if (at == bt) return  1;//Scanner::SCAN_COMPARE_EQUALS;
+	else if (at < bt) return  2;//Scanner::SCAN_COMPARE_GREATER_THAN;
+	else return 4;//Scanner::SCAN_COMPARE_LESS_THAN;
 }
 
 template<typename T>
@@ -59,7 +58,7 @@ CompareTypeFlags numericComparator(const void* const source, const void* const c
 {
 	auto at = *(T*)source;
 	auto bt = *(T*)check;
-	if (at == bt) return  Scanner::SCAN_COMPARE_EQUALS;
-	else if (at < bt) return  Scanner::SCAN_COMPARE_GREATER_THAN;
-	else return Scanner::SCAN_COMPARE_LESS_THAN;
+	if (at == bt) return  1;//Scanner::SCAN_COMPARE_EQUALS;
+	else if (at < bt) return 2;//Scanner::SCAN_COMPARE_GREATER_THAN;
+	else return 4;//Scanner::SCAN_COMPARE_LESS_THAN;
 }
